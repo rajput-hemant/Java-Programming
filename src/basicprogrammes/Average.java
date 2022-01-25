@@ -2,17 +2,24 @@ package basicprogrammes;
 
 import java.util.Scanner;
 
+// Enter 3 numbers from the user & make a function to print their average.
+
 public class Average {
+    static float average(int[] arr, int n) {
+        float avg = 0;
+        for (int i = 0; i < arr.length; i++)
+            avg += arr[i];
+        return avg/n;
+    }
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        int[] arr = new int[5];
-        float avg = 0;
-        System.out.println("Enter the Numbers:");
-        for (int i = 0; i < 5; i ++) {
-        arr[i] = sc.nextInt();
-        avg += arr[i];
-        }
+        System.out.print("Enter the number of elements you want to calculate the average of - ");
+        int n = sc.nextInt();
+        int[] arr = new int[n];
+        System.out.print("Enter the Numbers - ");
+        for (int i = 0; i < n; i ++)
+            arr[i] = sc.nextInt();
         sc.close();
-        System.out.println("Average is:" + avg/5);
+        System.out.println("Average is - " + average(arr, n));
     }
 }
