@@ -1,4 +1,4 @@
-package hackerrank.questions;
+package questions;
 
 import java.util.Scanner;
 
