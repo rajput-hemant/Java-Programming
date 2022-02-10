@@ -31,6 +31,6 @@ public class SortHelper {
         System.out.print("Array after sorting -> [");
         for (int i : arr)
             System.out.print(i + ", ");
-        System.out.print("\b\b]");
+        System.out.println("\b\b]");
     }
 }
